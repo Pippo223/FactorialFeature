@@ -1,0 +1,96 @@
+$ npm test
+
+> blank-workspace@1.0.0 test /home/ccuser/workspace/tdd-mocha-project
+> mocha
+
+
+
+  Calculate
+    .factorial
+      1) Throw an error if 5! is not equal to 120
+
+
+  0 passing (7ms)
+  1 failing
+
+  1) Calculate .factorial Throw an error if 5! is not equal to 120:
+     TypeError: Calculate.factorial is not a function
+      at Context.it (test/index_test.js:7:30)
+
+
+
+npm ERR! Test failed.  See above for more details.
+
+//Input of 5
+$ npm test
+
+> blank-workspace@1.0.0 test /home/ccuser/workspace/tdd-mocha-project
+> mocha
+
+
+
+  Calculate
+    .factorial
+      ✓ Throw an error if 5! is not equal to 120
+
+
+  1 passing (5ms)
+
+  //New test for input 3 and output 6
+$ npm test
+
+> blank-workspace@1.0.0 test /home/ccuser/workspace/tdd-mocha-project
+> mocha
+
+  Calculate
+    .factorial
+      ✓ Throw an error if 5! is not equal to 120
+      1) Factorial method returns 6 when you pass 3
+
+
+  1 passing (8ms)
+  1 failing
+
+  1) Calculate .factorial Factorial method returns 6 when you pass 3:
+
+      AssertionError: 6 == 120
+      + expected - actual
+
+      -6
+      +120
+      
+      at Context.it (test/index_test.js:17:14)
+
+
+
+npm ERR! Test failed.  See above for more details.
+
+//After Factorial method
+$ npm test
+
+> blank-workspace@1.0.0 test /home/ccuser/workspace/tdd-mocha-project
+> mocha
+
+  Calculate
+    .factorial
+      ✓ Throw an error if 5! is not equal to 120
+      ✓ Factorial method returns 6 when you pass 3
+
+
+  2 passing (5ms)
+
+  //Edge case of 0 returns 1
+  $ npm test
+
+> blank-workspace@1.0.0 test /home/ccuser/workspace/tdd-mocha-project
+> mocha
+
+  Calculate
+    .factorial
+      ✓ returns 120 when 5 is passed
+      ✓ returns 6 when 3 is passed
+      ✓ returns 1 when 0 is passed (edge case)
+
+
+  3 passing (6ms)
+
